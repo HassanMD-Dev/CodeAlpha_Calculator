@@ -44,12 +44,12 @@ This project focuses on clean UI design, smooth user interaction, and core JavaS
 
 🎯 Learning Objectives
 
-Practice DOM manipulation using JavaScript
+- Practice DOM manipulation using JavaScript
 
-Improve UI/UX design skills
+- Improve UI/UX design skills
 
-Understand event handling
+- Understand event handling
 
-Build real-world frontend projects
+- Build real-world frontend projects
 
 
