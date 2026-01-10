@@ -20,4 +20,14 @@ This project focuses on clean UI design, smooth user interaction, and core JavaS
 
 - **HTML5** – Structure  
 - **CSS3** – Styling & layout  
-- **JavaScript (ES6)** – Calculator logic and interactions  
+- **JavaScript (ES6)** – Calculator logic and interactions
+
+
+---
+
+## 🖥️ How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com//calculator.git
+
