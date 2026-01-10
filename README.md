@@ -29,5 +29,27 @@ This project focuses on clean UI design, smooth user interaction, and core JavaS
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com//calculator.git
+   https://github.com/HassanMD-Dev/CodeAlpha_Calculator.git
+
+2.Navigate to the project folder:
+
+cd calculator
+
+
+Open index.html in your browser.
+
+📸 Preview
+
+![Calculator]()
+
+🎯 Learning Objectives
+
+Practice DOM manipulation using JavaScript
+
+Improve UI/UX design skills
+
+Understand event handling
+
+Build real-world frontend projects
+
 
