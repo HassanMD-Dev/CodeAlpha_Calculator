@@ -9,7 +9,7 @@ buttons.forEach((button) => {
       display.value = "";
     } else if (value === "=") {
       try {
-        display.value = eval(display.value);
+        display.value = math.evaluate(display.value);
       } catch {
         display.value = "ERROR";
       }
@@ -27,7 +27,7 @@ document.addEventListener("keydown", (e) => {
     display.value += key;
   } else if (key === "Enter") {
     try {
-      display.value = eval(display.value);
+      display.value = math.evaluate(display.value);
     } catch (error) {
       display.value = "ERROR";
     }
