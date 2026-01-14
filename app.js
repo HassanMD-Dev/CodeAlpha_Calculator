@@ -1,6 +1,6 @@
 const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button");
-const icon = document.querySelector(".fa-backspace");
+const action = button.dataset.action;
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -12,9 +12,8 @@ buttons.forEach((button) => {
         display.value = math.evaluate(display.value);
       } catch {
         display.value = "Invalid Expression";
-        display.value.style.color = "red";
       }
-    } else if (value === icon.textContent) {
+    } else if (action === "Backspace") {
       display.value = display.value.slice(0, -1);
     } else {
       display.value += value;
@@ -33,7 +32,6 @@ document.addEventListener("keydown", (e) => {
       display.value = math.evaluate(display.value);
     } catch (error) {
       display.value = "Invalid Expression";
-      display.value.style.color = "red";
     }
   } else if (key === "Backspace") {
     e.preventDefault();
