@@ -12,6 +12,8 @@ buttons.forEach((button) => {
         display.value = math.evaluate(display.value);
       } catch {
         display.value = "ERROR";
+        display.value.style.animation = "shake 0.3s";
+        display.value.style.color = "red";
       }
     } else if (value === icon.textContent) {
       display.value = display.value.slice(0, -1);
@@ -32,6 +34,8 @@ document.addEventListener("keydown", (e) => {
       display.value = math.evaluate(display.value);
     } catch (error) {
       display.value = "ERROR";
+      display.value.style.animation = "shake 0.3s";
+      display.value.style.color = "red";
     }
   } else if (key === "Backspace") {
     e.preventDefault();
