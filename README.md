@@ -40,7 +40,7 @@ This project focuses on clean UI design, smooth user interaction, and core JavaS
 
 📸 Preview
 
-![Calculator](https://hmdcalculator.netlify.app/)
+[https://hmdcalculator.netlify.app/]
 
 🎯 Learning Objectives
 
