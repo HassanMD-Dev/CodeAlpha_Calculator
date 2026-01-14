@@ -10,7 +10,6 @@ buttons.forEach((button) => {
     } else if (value === "=") {
       try {
         display.value = math.evaluate(display.value);
-        display.value = Number.isFinite(result) ? result : "ERROR";
       } catch {
         display.value = "Invalid Expression";
         display.value.style.animation = "shake 0.3s";
@@ -33,7 +32,6 @@ document.addEventListener("keydown", (e) => {
     try {
       e.preventDefault();
       display.value = math.evaluate(display.value);
-      display.value = Number.isFinite(result) ? result : "ERROR";
     } catch (error) {
       display.value = "Invalid Expression";
       display.value.style.animation = "shake 0.3s";
