@@ -1,21 +1,32 @@
 const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button");
-const action = button.dataset.action;
+const operators = ["+", "-", "*", "/"];
+
+function calculate() {
+  try {
+    display.value = math.evaluate(display.value);
+  } catch {
+    display.value = "Invalid Expression";
+  }
+}
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const value = button.textContent;
+    const action = button.dataset.action;
+    const lastChar = display.value.slice(-1);
+
+    if (display.value === "Invalid Expression") display.value = "";
+
     if (value === "C") {
       display.value = "";
     } else if (value === "=") {
-      try {
-        display.value = math.evaluate(display.value);
-      } catch {
-        display.value = "Invalid Expression";
-      }
-    } else if (action === "Backspace") {
+      calculate();
+    } else if (action === "backspace") {
       display.value = display.value.slice(0, -1);
     } else {
+      if (operators.includes(value) && operators.includes(lastChar)) return;
+      if (value === "." && display.value.split(/[\+\-\*\/]/).pop().includes(".")) return;
       display.value += value;
     }
   });
@@ -23,16 +34,15 @@ buttons.forEach((button) => {
 
 document.addEventListener("keydown", (e) => {
   const key = e.key;
-  if ((e.key >= "0" && e.key <= "9") || ["+", "-", "*", "/"].includes(e.key)) {
+  const lastChar = display.value.slice(-1);
+
+  if (/[\d+\-*/.]/.test(key)) {
     e.preventDefault();
+    if (operators.includes(key) && operators.includes(lastChar)) return;
     display.value += key;
   } else if (key === "Enter") {
-    try {
-      e.preventDefault();
-      display.value = math.evaluate(display.value);
-    } catch (error) {
-      display.value = "Invalid Expression";
-    }
+    e.preventDefault();
+    calculate();
   } else if (key === "Backspace") {
     e.preventDefault();
     display.value = display.value.slice(0, -1);
