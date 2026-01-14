@@ -12,7 +12,6 @@ buttons.forEach((button) => {
         display.value = math.evaluate(display.value);
       } catch {
         display.value = "Invalid Expression";
-        display.value.style.animation = "shake 0.3s";
         display.value.style.color = "red";
       }
     } else if (value === icon.textContent) {
@@ -34,7 +33,6 @@ document.addEventListener("keydown", (e) => {
       display.value = math.evaluate(display.value);
     } catch (error) {
       display.value = "Invalid Expression";
-      display.value.style.animation = "shake 0.3s";
       display.value.style.color = "red";
     }
   } else if (key === "Backspace") {
