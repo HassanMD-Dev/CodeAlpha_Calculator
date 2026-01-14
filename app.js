@@ -10,8 +10,9 @@ buttons.forEach((button) => {
     } else if (value === "=") {
       try {
         display.value = math.evaluate(display.value);
+        display.value = Number.isFinite(result) ? result : "ERROR";
       } catch {
-        display.value = "ERROR";
+        display.value = "Invalid Expression";
         display.value.style.animation = "shake 0.3s";
         display.value.style.color = "red";
       }
@@ -32,8 +33,9 @@ document.addEventListener("keydown", (e) => {
     try {
       e.preventDefault();
       display.value = math.evaluate(display.value);
+      display.value = Number.isFinite(result) ? result : "ERROR";
     } catch (error) {
-      display.value = "ERROR";
+      display.value = "Invalid Expression";
       display.value.style.animation = "shake 0.3s";
       display.value.style.color = "red";
     }
