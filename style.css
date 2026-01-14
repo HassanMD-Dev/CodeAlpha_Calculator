@@ -29,6 +29,9 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+.op{
+  background-color: #F78E2C;
+}
 button {
   background: #3c4b64;
   color: #ffffff;
